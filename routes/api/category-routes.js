@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
   })
     .then((dbCatData) => {
       if (!dbCatData) {
-        res.status(404).json({ message: `No category was found with this id` });
+        res.status(404).json({ message: 'Category Not Found.' });
         return;
       }
       res.json(dbCatData);
@@ -72,7 +72,7 @@ router.put('/:id', (req, res) => {
   )
     .then((dbCatData) => {
       if (!dbCatData) {
-        res.status(404).json({ message: `No category was found with this id` });
+        res.status(404).json({ message: 'Category Not Found.' });
         return;
       }
       res.json(dbCatData);
@@ -92,7 +92,7 @@ router.delete('/:id', (req, res) => {
   })
     .then((dbCatData) => {
       if (!dbCatData) {
-        res.status(404).json({ message: `No category was found with this id` });
+        res.status(404).json({ message: 'Category Not Found.' });
         return;
       }
       res.json(dbCatData);
